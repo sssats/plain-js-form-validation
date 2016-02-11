@@ -1,0 +1,178 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background: #eeeded;
+
+    color: #263238;
+
+    font-size: 18px;
+}
+
+main {
+    width: 400px;
+    margin: 10% auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+}
+
+header {
+    background: #3F51B5;
+}
+
+header h1 {
+    font-size: 26px;
+    color: white;
+    padding: 20px;
+}
+
+header p {
+    background: #FF4081;
+    height: 3px;
+}
+
+.formWrapper {
+    background: white;
+    position: relative;
+    padding: 20px;
+}
+
+.step {
+    display: none;
+}
+
+@keyframes next {
+    0% {
+        transform: translateX(-100%);
+        display: none;
+    }
+    1% {
+        display: block;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.step.active {
+    display: block;
+    animation: next 0.3s ease-out;
+}
+
+.row {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.text.focused label {
+    padding-left: 10px;
+}
+
+.text input {
+    padding: 8px 10px;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 1px solid #263238;
+}
+
+label.inline {
+    display: inline-block;
+}
+
+.required label:after {
+    content: '*';
+    display: inline-block;
+    color: #FF4081;
+    margin-left: 5px;
+}
+
+label {
+    display: block;
+    transition: padding 0.2s ease-out;
+}
+
+input {
+    width: 100%;
+    outline: none;
+}
+
+.radioWrapper > label {
+    padding-bottom: 20px;
+}
+
+.radio {
+    display: inline-block;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+}
+
+.radio label:after {
+    display: none;
+}
+
+.radio label:before {
+    content: "";
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+.radio label:before {
+    border-radius: 8px;
+}
+
+.radio input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.wrapper.right {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-left: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn.primary {
+    background: #FF4081;
+    color: white;
+}
+
+.btn.secondary {
+    background: #3F51B5;
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+

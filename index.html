@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plain-js-form-validation</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<main id="main">
+    <header>
+        <h1>Registration</h1>
+        <p class="progress" style="width: 33%"></p>
+
+    </header>
+    <div class="formWrapper">
+
+        <section class="step active" data-step-id="1">
+            <div class="row text required">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div class="row text required">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <div class="row text required">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="row radioWrapper required">
+                <label>Gender</label>
+                <div class="radio">
+                    <input type="radio" name="gender" value="male" id="male"/>
+                    <label for="male" class="inline">Male</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="gender" value="female" id="female"/>
+                    <label for="female" class="inline">Female</label>
+                </div>
+            </div>
+
+            <div class="wrapper right">
+                <a class="btn clear">Clear</a>
+                <a class="btn primary submit">Next</a>
+            </div>
+
+        </section>
+
+
+        <section class="step" data-step-id="2">
+            <div class="row required text">
+                <label for="country">Country</label>
+                <input type="text" id="country">
+            </div>
+            <div class="row required text">
+                <label for="city">City</label>
+                <input type="text" id="city">
+            </div>
+            <div class="row required text">
+                <label for="address1">Address 1</label>
+                <input type="text" id="address1">
+            </div>
+            <div class="row text">
+                <label for="address2">Address 2</label>
+                <input type="text" id="address2">
+            </div>
+            <div class="row required text">
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip">
+            </div>
+            <div class="row text">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone">
+            </div>
+
+            <div class="wrapper right">
+                <a class="btn back secondary">Back</a>
+                <a class="btn clear">Clear</a>
+                <a class="btn primary submit">Next</a>
+            </div>
+
+        </section>
+        <section class="step" data-step-id="3">
+            <div class="row file">
+                <label for="avatar">Avatar</label>
+                <input type="file" id="avatar">
+            </div>
+            <div class="row tags">
+                <label>Interests</label>
+                <a href="" class="btn primary"></a>
+                <a href="" class="btn primary"></a>
+                <a href="" class="btn primary"></a>
+                <a href="" class="btn primary"></a>
+            </div>
+            <div class="row longtext">
+                <label>About me</label>
+                <textarea name="about" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="row longtext">
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday">
+            </div>
+            <div class="row check required">
+                <label for="agree">Birthday</label>
+                <input type="radio" value="1" id="agree"/>
+            </div>
+
+            <div class="wrapper right">
+                <a class="btn back secondary">Back</a>
+                <a class="btn clear">Clear</a>
+                <a class="btn primary submit">Submit</a>
+            </div>
+
+        </section>
+    </div>
+</main>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
